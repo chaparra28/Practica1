@@ -1,0 +1,31 @@
+<h1 class="text text-primary">Tabla de datos personales</h1>
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th >Nombre</th>
+        <th >Apellido Paterno</th>
+        <th >Apellido Materno</th>
+        <th >Edad</th>
+        <th >Sexo</th>
+        <th >correo</th>  
+        <th >Icono</th>     
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of Agregados">
+      <tr>
+         <td>{{item.Nombre}}</td>
+        <td>{{item.ApellidoPat}}</td>
+        <td>{{item.ApellidoMat}}</td>
+        <td>{{item.Edad}}</td>
+        <td>{{item.Sexo}}</td>
+        <td>{{item.Correo}}</td>
+        <th><i class="fa " [ngClass]="{'fa-bars': item.Icono==1,'fa-binoculars': item.Icono==2,'fa-bicycle': item.Icono==3,'fa-bell': item.Icono==4,'fa-briefcase':item.Icono==5,'fa-bomb': item.Icono==6,'fa-blind': item.Icono==7,'fa-book': item.Icono==8,'fa-comment':item.Icono==9,'fa-cloud':item.Icono==10}"></i></th>
+      </tr>
+    </tbody>
+    <br> 
+  </table>
+  <div class="=col-md-12">
+    <button type="button" name="" id="" class="btn btn-danger btn-lg btn-block" (click)="Borrar()">Borrar</button>
+</div> 
+ 
+  
